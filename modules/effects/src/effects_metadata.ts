@@ -1,4 +1,4 @@
-import { compose } from '@ngrx/store';
+import { compose } from '../../store';
 
 const METADATA_KEY = '__@ngrx/effects__';
 
@@ -14,7 +14,7 @@ function getEffectMetadataEntries<T>(sourceProto: T): Array<EffectMetadata<T>> {
     : [];
 }
 
-function setEffectMetadataEntries<T>(
+export function setEffectMetadataEntries<T>(
   sourceProto: T,
   entries: Array<EffectMetadata<T>>
 ) {

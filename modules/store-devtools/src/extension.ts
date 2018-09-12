@@ -1,5 +1,5 @@
 import { Inject, Injectable, InjectionToken } from '@angular/core';
-import { Action } from '@ngrx/store';
+import { Action } from '../../store';
 import { empty, of, Observable } from 'rxjs';
 import {
   filter,
@@ -28,7 +28,7 @@ import {
   sanitizeStates,
   unliftState,
 } from './utils';
-import { UPDATE } from '@ngrx/store';
+import { UPDATE } from '../../store';
 import { DevtoolsDispatcher } from './devtools-dispatcher';
 
 export const ExtensionActionTypes = {

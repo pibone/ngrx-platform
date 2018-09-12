@@ -1,5 +1,5 @@
 import { ErrorHandler, Injectable } from '@angular/core';
-import { Action } from '@ngrx/store';
+import { Action } from '../../store';
 import { Notification, Observable, Subject } from 'rxjs';
 import {
   dematerialize,

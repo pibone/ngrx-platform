@@ -1,5 +1,5 @@
 import { Injectable, OnDestroy } from '@angular/core';
-import { Store } from '@ngrx/store';
+import { Store } from '../../store';
 import { Subscription } from 'rxjs';
 
 import { EffectSources } from './effect_sources';
@@ -13,7 +13,7 @@ export class EffectsRunner implements OnDestroy {
     private store: Store<any>
   ) {}
 
-  start() {
+  public start() {
     if (!this.effectsSubscription) {
       this.effectsSubscription = this.effectSources
         .toActions()

@@ -1,5 +1,5 @@
 import { NgModule, Inject, Optional } from '@angular/core';
-import { StoreRootModule, StoreFeatureModule, Store } from '@ngrx/store';
+import { StoreRootModule, StoreFeatureModule, Store } from '../../store';
 import { EffectsRootModule } from './effects_root_module';
 import { FEATURE_EFFECTS } from './tokens';
 import { getSourceForInstance } from './effects_metadata';

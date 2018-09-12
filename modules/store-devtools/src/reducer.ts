@@ -6,7 +6,7 @@ import {
   ReducerManager,
   UPDATE,
   INIT,
-} from '@ngrx/store';
+} from '../../store';
 import { difference, liftAction } from './utils';
 import * as DevtoolsActions from './actions';
 import { StoreDevtoolsConfig, StateSanitizer } from './config';
@@ -186,8 +186,7 @@ export function liftReducerWith(
       computedStates,
       isLocked,
       isPaused,
-    } =
-      liftedState || initialLiftedState;
+    } = liftedState || initialLiftedState;
 
     if (!liftedState) {
       // Prevent mutating initialLiftedState
@@ -315,8 +314,8 @@ export function liftReducerWith(
         // Toggle whether an action with given ID is skipped.
         // Being skipped means it is a no-op during the computation.
         const { start, end, active } = liftedAction;
-        const actionIds = [];
-        for (let i = start; i < end; i++) actionIds.push(i);
+        const actionIds: any[] = [];
+        for (let i = start; i < end; i++) actionIds.push(<any>i);
         if (active) {
           skippedActionIds = difference(skippedActionIds, actionIds);
         } else {

@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@angular/core';
-import { Action, ScannedActionsSubject } from '@ngrx/store';
+import { Action, ScannedActionsSubject } from '../../store';
 import { Observable, Operator, OperatorFunction } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
